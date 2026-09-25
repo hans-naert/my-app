@@ -18,11 +18,13 @@ function App() {
 
   return (
     <>
-    <Counter initialCount="5"/>
-    {nameJSX}
-    <div>count: {count}</div>
-    <button onClick={handleIncrement}>Increment</button>
-      
+      <Counter initialCount={20} />
+      <Counter initialCount="10" />
+      <Counter />
+      {nameJSX}
+      <div>count: {count}</div>
+      <button onClick={handleIncrement}>Increment</button>
+
     </>
   )
 }
