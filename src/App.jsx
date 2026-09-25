@@ -5,7 +5,6 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
-
   const [count, setCount] = useState(0)
   //const count=0;
   function handleIncrement() {
@@ -13,8 +12,12 @@ function App() {
     //count++
   }
 
+  let name = 'Vives'
+  let nameJSX = <h1>Hello {name}</h1>
+
   return (
     <>
+    {nameJSX}
     <div>count: {count}</div>
     <button onClick={handleIncrement}>Increment</button>
       
