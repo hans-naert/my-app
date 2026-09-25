@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-    <Counter/>
+    <Counter initialCount="5"/>
     {nameJSX}
     <div>count: {count}</div>
     <button onClick={handleIncrement}>Increment</button>

@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
 import './Counter.css'
-function Counter() {
-    let [count, setCount] = useState(0);
+function Counter({initialCount=0}) {
+    initialCount=parseInt(initialCount);
+    let [count, setCount] = useState(initialCount);
     useEffect(() => {
     const interval = setInterval(() => {
         setCount(count => count + 1);
