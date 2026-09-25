@@ -18,9 +18,14 @@ function App() {
 
   return (
     <>
-      <Counter initialCount={20} end={22} />
-      <Counter initialCount="10" end="30" />
-      <Counter />
+      {(() => {
+        let jsx = []
+        for (let i = 0; i < 3; i++) {
+          jsx.push(<Counter key={i} initialCount={i * 10} end={i * 10 + 5} />)
+        }
+        return jsx;
+      })()}
+      {[1,2,3].map((i) => <Counter key={i} initialCount={i * 10} end={i * 10 + 5} />)}
       {nameJSX}
       <div>count: {count}</div>
       <button onClick={handleIncrement}>Increment</button>
