@@ -15,6 +15,14 @@ function Counter({initialCount=0, end=20}) {
     return () => clearInterval(interval);
     });
 
-    return <><span className="counter">Hello counter: {count}</span></>
+    return <><span className="counter">Hello counter: {count}</span>
+    <div>{(count<end) ? 'Still counting...' : 'Done!'}
+          {(() => {
+            if(count<end) {
+              return 'Still counting...';
+            } else {
+              return 'Done!';
+            }
+          })()}</div></>
 }
 export default Counter
