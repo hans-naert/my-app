@@ -18,8 +18,8 @@ function App() {
 
   return (
     <>
-      <Counter initialCount={20} />
-      <Counter initialCount="10" />
+      <Counter initialCount={20} end={22} />
+      <Counter initialCount="10" end="30" />
       <Counter />
       {nameJSX}
       <div>count: {count}</div>
